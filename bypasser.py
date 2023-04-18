@@ -1932,7 +1932,7 @@ def shortners(url):
         return sharer_pw(url, Laravel_Session, XSRF_TOKEN)
 
     # gdtot url
-    elif "gdtot.cfd/" in url:
+    elif "new6.gdtot.cfd/" in url:
         print("entered gdtot:",url)
         return gdtot(url,GDTot_Crypt)
         
