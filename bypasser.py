@@ -54,6 +54,7 @@ def pdisk(url):
    return p
 
 def pdisk(url):
+	client = session()
     r = client.get(url).text
     try: return r.split("<!-- ")[-1].split(" -->")[0]
     except:
