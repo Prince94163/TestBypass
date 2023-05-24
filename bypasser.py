@@ -53,13 +53,7 @@ def pdisk(url):
    p = z.split("<!-- ")[-1]
    return p
 
-def pdisk(url):
-	client = session()
-    r = client.get(url).text
-    try: return r.split("<!-- ")[-1].split(" -->")[0]
-    except:
-        try:return BeautifulSoup(r,"html.parser").find('video').find("source").get("src")
-        except: return None
+
 
 ###############################################################
 # index scrapper
