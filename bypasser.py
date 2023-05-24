@@ -54,7 +54,7 @@ def pdisk(url):
    return p
 
 def pdisk(url):
-    r = get(url).text
+    r = client.get(url).text
     try: return r.split("<!-- ")[-1].split(" -->")[0]
     except:
         try:return BeautifulSoup(r,"html.parser").find('video').find("source").get("src")
