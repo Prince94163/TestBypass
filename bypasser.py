@@ -45,6 +45,15 @@ gdlist = ["appdrive","driveapp","drivehub","gdflix","drivesharer","drivebit","dr
 # pdisk
 
 def pdisk(url):
+   client = session()
+   r = client.get(url).text
+   x = r.split("</center>")[-1]
+   y = x.split("</script>")[1]
+   z = y.split("-->")[0]
+   p = z.split("<!-- ")[-1]
+   return p
+
+def pdisk(url):
     r = get(url).text
     try: return r.split("<!-- ")[-1].split(" -->")[0]
     except:
